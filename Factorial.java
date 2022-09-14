@@ -1,17 +1,33 @@
 import java.util.Scanner;
-class Factorial
+public class Factorial
 {
- public static void main(String[]args)
- {
-  int i,factorial=1,num;
-  System.out.print("enter the number:");
-  Scanner as=new Scanner(System.in);
-  num=as.nextInt();
-  for(i=1;i<=num;i++)
-  {
-   factorial=factorial*i;
- }
-  System.out.println("The factorial of the entered number is:"+factorial);
- }
-
+public static void main(String[] args)
+{
+int i,j,pr=1;
+try{
+Scanner s=new Scanner(System.in);
+System.out.println("Enter the number to find the factorial");
+int n=s.nextInt();
+if(n<0)
+{
+System.out.println("Invalid");
+}
+else if(n==0)
+{
+System.out.println("1");
+}
+else
+{
+for(i=n;i>0;i--)
+{
+pr=pr*i;
+}
+System.out.println("The answer is:"+pr);
+}
+}
+catch(Exception e)
+{
+System.out.println("Invalid");
+}
+}
 }
